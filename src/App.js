@@ -7,12 +7,14 @@ import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './styles/reduction.scss';
 
 const CardPage = React.lazy(() => import('pages/CardPage'));
+const ButtonPage = React.lazy(() => import('pages/ButtonPage'));
 
 function App() {
   return (
     <BrowserRouter>
       <MainLayout>
         <React.Suspense fallback={<PageSpinner />}>
+            <Route exact path="/buttons" component={ButtonPage} />
             <Route exact path="/cards" component={CardPage} />
         </React.Suspense>
       </MainLayout>
