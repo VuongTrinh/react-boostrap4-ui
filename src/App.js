@@ -1,14 +1,21 @@
 import React from 'react';
+import PageSpinner from 'components/PageSpinner';
 import componentQueries from 'react-component-queries';
 import MainLayout from 'components/Layout/MainLayout';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import './styles/reduction.scss';
+
+const CardPage = React.lazy(() => import('pages/CardPage'));
 
 function App() {
   return (
     <BrowserRouter>
-      <MainLayout></MainLayout>
+      <MainLayout>
+        <React.Suspense fallback={<PageSpinner />}>
+            <Route exact path="/cards" component={CardPage} />
+        </React.Suspense>
+      </MainLayout>
     </BrowserRouter>
   );
 }

@@ -5,29 +5,8 @@ import SearchInput from "components/SearchInput";
 import { notificationsData } from "demos/header";
 import withBadge from "hocs/withBadge";
 import React from "react";
-import {
-  MdClearAll,
-  MdExitToApp,
-  MdHelp,
-  MdInsertChart,
-  MdMessage,
-  MdNotificationsActive,
-  MdNotificationsNone,
-  MdPersonPin,
-  MdSettingsApplications,
-} from "react-icons/md";
-import {
-  Button,
-  ListGroup,
-  ListGroupItem,
-  // NavbarToggler,
-  Nav,
-  Navbar,
-  NavItem,
-  NavLink,
-  Popover,
-  PopoverBody,
-} from "reactstrap";
+import { MdClearAll, MdExitToApp, MdHelp, MdInsertChart, MdMessage, MdNotificationsActive, MdNotificationsNone, MdPersonPin, MdSettingsApplications, } from "react-icons/md";
+import { Button, ListGroup, ListGroupItem, Nav, Navbar, NavItem, NavLink, Popover, PopoverBody, } from "reactstrap";
 import bn from "utils/bemnames";
 
 const bem = bn.create("header");
